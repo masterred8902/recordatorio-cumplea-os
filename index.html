@@ -1519,6 +1519,24 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
       </div>
     </div>
   </div>
+      <audio id="musica" autoplay loop>
+  <source src="musica.mp3" type="audio/mpeg">
+  Este navegador no acepta audio.
+</audio>
+
+<script>
+  function playAudio() {
+    const audio = document.getElementById("musica");
+    if (audio.paused) {
+      audio.play().catch((err) => {
+        console.log("El navegador bloqueó la reproducción automática:", err);
+      });
+    }
+  }
+
+  // O puedes llamar esto cuando se haga clic en un botón u otro evento
+  // playAudio();
+</script>
       </body>
 
 </html>
